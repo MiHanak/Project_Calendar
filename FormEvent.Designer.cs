@@ -35,6 +35,10 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtVievDesc = new System.Windows.Forms.RichTextBox();
+            this.txtVievName = new System.Windows.Forms.TextBox();
+            this.txtVievDate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNameEvent
@@ -97,11 +101,47 @@
             this.txtDate.Size = new System.Drawing.Size(174, 20);
             this.txtDate.TabIndex = 9;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(11, 168);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Uložit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txtVievDesc
+            // 
+            this.txtVievDesc.Location = new System.Drawing.Point(355, 70);
+            this.txtVievDesc.Name = "txtVievDesc";
+            this.txtVievDesc.Size = new System.Drawing.Size(174, 78);
+            this.txtVievDesc.TabIndex = 11;
+            this.txtVievDesc.Text = "";
+            // 
+            // txtVievName
+            // 
+            this.txtVievName.Location = new System.Drawing.Point(355, 44);
+            this.txtVievName.Name = "txtVievName";
+            this.txtVievName.Size = new System.Drawing.Size(174, 20);
+            this.txtVievName.TabIndex = 12;
+            // 
+            // txtVievDate
+            // 
+            this.txtVievDate.Enabled = false;
+            this.txtVievDate.Location = new System.Drawing.Point(355, 15);
+            this.txtVievDate.Name = "txtVievDate";
+            this.txtVievDate.Size = new System.Drawing.Size(174, 20);
+            this.txtVievDate.TabIndex = 13;
+            // 
             // FormEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 221);
+            this.ClientSize = new System.Drawing.Size(602, 222);
+            this.Controls.Add(this.txtVievDate);
+            this.Controls.Add(this.txtVievName);
+            this.Controls.Add(this.txtVievDesc);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.btnSave);
@@ -127,5 +167,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.RichTextBox txtDescription;
         private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox txtVievDesc;
+        private System.Windows.Forms.TextBox txtVievName;
+        private System.Windows.Forms.TextBox txtVievDate;
     }
 }

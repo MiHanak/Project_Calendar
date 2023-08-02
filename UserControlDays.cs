@@ -57,7 +57,7 @@ namespace Calendar
         {
             MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
-            String sql = "SELECT nazev FROM tbl_event WHERE datum = ?";
+            String sql = "SELECT * FROM tbl_event WHERE datum = ?";
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = sql;
             cmd.Parameters.AddWithValue("datum", lblDays.Text + "-" + Form1.static_month + "-" + Form1.static_year);

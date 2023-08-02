@@ -28,6 +28,24 @@ namespace Calendar
         {
             //generování datumu v textboxu
             txtDate.Text = UserControlDays.statick_day + "-" + Form1.static_month + "-" + Form1.static_year;
+
+            MySqlConnection conn = new MySqlConnection(connString);
+            conn.Open();
+            String sql = "SELECT datum, nazev, popis FROM tbl_event WHERE datum = ?";
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sql;
+            cmd.Parameters.AddWithValue("datum", txtDate.Text);
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    txtVievDate.Text = reader.GetString("datum");
+                    txtVievName.Text = reader.GetString("nazev");
+                    txtVievDesc.Text = reader.GetString("popis");
+                }
+            }
+            cmd.Dispose();
+            conn.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
